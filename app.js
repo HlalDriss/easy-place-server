@@ -51,8 +51,8 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 
     console.log('server is running http://localhost:3333');
 }) */
-
-var server=app.listen(port,function(){
-    var port=server.address().port;
+const port = Process.env.PORT
+var server=app.listen(port ,function(){
+   // var port=server.address().port;
     console.log('Exppress is working on port '+ port);
 })
